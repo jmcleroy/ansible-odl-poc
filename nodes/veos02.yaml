@@ -3,6 +3,7 @@ ansible_network_os: eos
 enabled: yes
 
 vm_disk: vEOS-lab-4.20.1F-combined.qcow2
+hostname: eos02
 console_port: 2002
 
 connections:

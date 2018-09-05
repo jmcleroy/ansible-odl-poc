@@ -4,7 +4,7 @@
     path: "{{ netlab_virt_images_path }}/{{ node.ansible_network_os }}"
     state: directory
 
-- name: create config iso images for cisco routers
+- name: create config iso images for Cisco routers
   shell: "mkisofs -l -o {{ netlab_files_path }}/{{ node.ansible_network_os }}/{{ node.vm_config }} {{ netlab_files_path }}/configs/{{ node.hostname }}"
   when: "node.ansible_network_os  == 'ios'"
 
@@ -42,6 +42,16 @@
     dest: "{{ netlab_virt_vm_path }}/{{ vm_name }}/{{ node.vm_config }}"
     remote_src: yes
   when: "'vm_config' in node"
+
+- name: create tmp folders
+  file:
+    path: "/tmp/{{ vm_name }}"
+    state: directory
+  when: "node.ansible_network_os  == 'eos'"
+
+- name: upload config files for Arista routers
+  shell: "guestmount -a {{ netlab_virt_vm_path }}/{{ vm_name }}/{{ node.vm_disk }} -m /dev/sda2 /tmp/{{ vm_name }} && cp -f {{ netlab_files_path }}/configs/{{ node.hostname }}/startup-config /tmp/{{ vm_name }} && guestunmount /tmp/{{ vm_name }}"
+  when: "node.ansible_network_os  == 'eos'"
 
 - name: create virtual machine
   virt:

@@ -2,7 +2,13 @@ hostname eos1
 username redhat privilege 15 secret redhat
 ip domain-name redhat.com
 ip route 0.0.0.0 0.0.0.0 192.168.10.1
+vrf definition red
 interface Management 1
 ip address 192.168.10.200 255.255.255.0
+no shut
+exit
+interface loopback 0
+ip address 200.0.4.1 255.255.255.0
+vrf forwarding red
 no shut
 exit

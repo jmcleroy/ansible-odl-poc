@@ -18,6 +18,7 @@ netlab_packages:
   - python-netaddr
   - ansible
   - telnet
+  - libguestfs 
 
 
 netlab_virt_base_path: /virt

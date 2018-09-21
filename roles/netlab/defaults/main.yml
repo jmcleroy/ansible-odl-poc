@@ -19,6 +19,7 @@ netlab_packages:
   - ansible
   - telnet
   - libguestfs 
+  - libguestfs-tools-c
 
 
 netlab_virt_base_path: /virt

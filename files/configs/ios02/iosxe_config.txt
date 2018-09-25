@@ -11,10 +11,42 @@ ip route 0.0.0.0 0.0.0.0 192.168.20.1
 line vty 0 4
 login local
 exit
-vrf definition blue
+
+no ip domain-lookup
+mpls label protocol ldp
+router bgp 10
+bgp log-neighbor-changes
+no bgp default ipv4-unicast
+neighbor 193.168.30.100 remote-as 10
+neighbor 193.168.30.100 update-source GigabitEthernet2
 address-family ipv4
-exit
-interface Loopback 0
-vrf forwarding blue
-ip address 200.0.6.1 255.255.255.0
-exit
+neighbor 193.168.30.100 activate
+exit-address-family
+address-family vpnv4
+neighbor 193.168.30.100 activate
+neighbor 193.168.30.100 send-community extended
+exit-address-family
+
+interface GigabitEthernet2
+ip address 193.168.30.200 255.255.255.0
+negotiation auto
+mpls ip
+mpls label protocol ldp
+no mop enabled
+no mop sysid
+no shut
+
+mpls ldp router-id GigabitEthernet1 force
+address-family vpnv4
+neighbor 193.168.30.100 activate
+neighbor 193.168.30.100 send-community extended
+exit-address-family
+
+address-family ipv4 vrf app
+redistribute connected
+exit-address-family
+
+interface GigabitEthernet3
+no shutdown
+interface GigabitEthernet4
+no shutdown

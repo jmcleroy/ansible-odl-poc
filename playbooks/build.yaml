@@ -9,6 +9,16 @@
         name: netlab
         tasks_from: provision
 
+- name: deploy ansible roles
+  hosts: hosts
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: deploy ansible roles
+      import_role:
+        name: netlab
+        tasks_from: predeploy
 
 - name: provision the virtual machines
   hosts: hosts

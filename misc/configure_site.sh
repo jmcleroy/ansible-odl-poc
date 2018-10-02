@@ -1,4 +1,4 @@
-curl -u admin:admin -X POST -H "Content-Type: application/json"  http://127.0.0.1:8181/restconf/config/ietf-l3vpn-svc:l3vpn-svc/sites/site/blue/ -d \
+curl -u admin:admin -X PUT -H "Content-Type: application/json"  http://127.0.0.1:8181/restconf/config/ietf-l3vpn-svc:l3vpn-svc/sites/site/blue/ -d \
 '{
     "site": [
         {
@@ -32,7 +32,7 @@ curl -u admin:admin -X POST -H "Content-Type: application/json"  http://127.0.0.
     ]
 }'
 
-curl -u admin:admin -X POST -H "Content-Type: application/json" http://127.0.0.1:8181/restconf/config/ietf-l3vpn-svc:l3vpn-svc/sites/site/blue/ -d \
+curl -u admin:admin -X PUT -H "Content-Type: application/json" http://127.0.0.1:8181/restconf/config/ietf-l3vpn-svc:l3vpn-svc/sites/site/blue2/ -d \
 '{
     "site": [
         {

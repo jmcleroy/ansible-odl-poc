@@ -9,8 +9,8 @@ console_port: 2006
 
 connections:
   - type: udp
-    s_port: 10601
-    d_port: 10102
+    s_port: 10202
+    d_port: 10501
 
   - type: udp
     s_port: 10602

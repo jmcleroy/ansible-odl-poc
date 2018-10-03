@@ -14,7 +14,7 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json"  http://127.0.0.1
                         "ip-connection": {
                             "ipv4": {
                                 "addresses": {
-                                    "provider-address": "192.168.10.100",
+                                    "provider-address": "10.10.10.10",
                                     "mask": "24"
                                 }
                             }
@@ -48,7 +48,7 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json" http://127.0.0.1:
                         "ip-connection": {
                             "ipv4": {
                                 "addresses": {
-                                    "provider-address": "162.168.20.100",
+                                    "provider-address": "20.20.20.20",
                                     "mask": "24"
                                 }
                             }

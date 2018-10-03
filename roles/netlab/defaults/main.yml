@@ -16,11 +16,14 @@ netlab_packages:
   - bridge-utils
   - python-lxml
   - python-netaddr
-  - ansible
   - telnet
   - libguestfs 
   - libguestfs-tools-c
+  - python-pip
+  - patch
 
+netlab_pip_packages:
+  - ansible-runner
 
 netlab_virt_base_path: /virt
 netlab_virt_vm_path: "{{ netlab_virt_base_path }}/vm"

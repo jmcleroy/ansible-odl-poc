@@ -9,7 +9,11 @@
   yum:
     name: "{{ netlab_packages }}"
     state: present
-  when: inventory_hostname != 'localhost'
+
+- name: install pip packages
+  pip:
+    name: "{{ netlab_pip_packages }}"
+    state: present
 
 - name: start required services
   service:
@@ -25,3 +29,8 @@
     - "{{ netlab_virt_vm_path }}"
     - "{{ netlab_virt_images_path }}"
     - "{{ netlab_virt_iso_path }}"
+
+- name: patch ansible-runner
+  patch:
+    src: ../../misc/ansible-runner.patch
+    dest: /usr/lib/python2.7/site-packages/ansible_runner/__main__.py

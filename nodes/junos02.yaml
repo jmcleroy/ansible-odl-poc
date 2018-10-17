@@ -1,10 +1,10 @@
 ---
-ansible_network_os: eos
-enabled: no
+ansible_network_os: junos
+enabled: yes
 
-vm_disk: vEOS-lab-4.20.1F-combined.qcow2
-hostname: eos02
-console_port: 2002
+vm_disk: vqfx10k-re-15.1X53-D60.qcow2
+hostname: junos02
+console_port: 2008
 
 connections:
   - type: udp
@@ -28,4 +28,4 @@ connections:
     d_port: 10000
 
 netlab_mgmt_source_bridge: br2
-mac_address: 52:54:00:aa:aa:02
+mac_address: 52:54:00:bb:bb:02

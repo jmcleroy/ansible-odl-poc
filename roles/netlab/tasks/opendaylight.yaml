@@ -14,7 +14,7 @@
 
 - name: Extract OpenDaylight zip file
   unarchive:
-    src: /root/karaf-0.1.0-SNAPSHOT.zip
+    src: /root/karaf-0.1.0-SNAPSHOT.tar.gz
     dest: /usr/local/bin
     mode: 0755
   when: netlab_odl

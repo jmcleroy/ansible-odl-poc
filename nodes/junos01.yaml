@@ -1,6 +1,6 @@
 ---
 ansible_network_os: junos
-enabled: yes
+enabled: no
 
 vm_disk: vqfx10k-re-15.1X53-D60.qcow2
 hostname: junos01

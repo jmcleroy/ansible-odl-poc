@@ -14,7 +14,7 @@ connections:
 
   - type: udp
     s_port: 10502
-    d_port: 10602
+    d_port: 10301
 
   - type: udp
     s_port: 10503

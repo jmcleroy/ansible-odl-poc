@@ -29,18 +29,9 @@
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
 
-    {% if node.cdrom %}
-    <disk type='file' device='cdrom'>
-      <driver name='qemu' type='raw'/>
-      <source file='{{ netlab_virt_iso_path }}/{{ node.cdrom }}'/>
-      <target dev='hdb' bus='ide'/>
-      <readonly/>
-      <address type='drive' controller='0' bus='0' target='0' unit='1'/>
-    </disk>
-    {% endif %}
-
     <interface type='bridge'>
-      <source bridge='br0'/>
+      <mac address='{{ node.mac_address }}'/>
+      <source bridge='{{ node.netlab_mgmt_source_bridge }}'/>
       <model type='virtio'/>
     </interface>
 

@@ -57,6 +57,13 @@ netlab_default_ip_ios02: 192.168.20.100
 
 netlab_default_ip_veos01: 192.168.10.200
 netlab_default_ip_veos02: 192.168.20.200
+
+netlab_default_ip_junos01: 192.168.10.150
+netlab_default_ip_junos02: 192.168.20.150
+
+netlab_default_ip_centos01: 192.168.10.5
+netlab_default_ip_centos02: 192.168.20.5
+
 # Set the name of the host provider to use.  Currently, this variable
 # accepts the following values:
 #

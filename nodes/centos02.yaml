@@ -1,0 +1,15 @@
+---
+ansible_network_os: centos
+enabled: yes
+
+vm_disk: CentOS-7-x86_64-GenericCloud.qcow2
+hostname: centos02
+console_port: 2010
+
+connections:
+  - type: udp
+    s_port: 10302
+    d_port: 10602
+
+netlab_mgmt_source_bridge: br2
+mac_address: 52:54:00:dd:dd:02

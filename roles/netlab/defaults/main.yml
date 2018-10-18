@@ -81,4 +81,5 @@ netlab_packet_plan: baremetal_1
 netlab_packet_facility: ewr1
 
 netlab_odl: true
+netlab_odl_path: '/usr/local/bin/'
 netlab_odl_roles: '/usr/share/opendaylight-ansible/project/roles'

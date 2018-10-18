@@ -42,3 +42,9 @@
     path: "{{ netlab_virt_base_path }}"
     state: absent
   when: netlab_clean_virt
+
+- name: clean OpenDaylight
+  file:
+    path: "{{ netlab_odl_path}}/karaf-0.1.0-SNAPSHOT/"
+    state: absent
+  when: netlab_odl

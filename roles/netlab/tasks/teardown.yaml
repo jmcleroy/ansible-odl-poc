@@ -46,5 +46,8 @@
 - name: clean OpenDaylight
   file:
     path: "{{ netlab_odl_path}}/karaf-0.1.0-SNAPSHOT/"
-    state: absent
+    state: "{{ item }}"
+  with_items:
+  - absent
+  - directory
   when: netlab_odl

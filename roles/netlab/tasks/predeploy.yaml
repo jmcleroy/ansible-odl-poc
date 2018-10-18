@@ -23,3 +23,7 @@
       dest: "{{ netlab_odl_roles }}/ansible-network.arista_eos"
       branch: devel
 
+- name: delete known_hosts
+  file:
+    path: "~/.ssh/known_hosts"
+    state: absent

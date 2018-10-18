@@ -19,7 +19,7 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json"  http://127.0.0.1
                                 }
                             }
                         },
-                        "pe-2-ce-tp-id": "loopback5",
+                        "pe-2-ce-tp-id": "GigabitEthernet3",
                         "pe-bgp-as": 10,
                         "username": "redhat",
                         "password": "redhat",
@@ -53,7 +53,7 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json" http://127.0.0.1:
                                 }
                             }
                         },
-                        "pe-2-ce-tp-id": "loopback5",
+                        "pe-2-ce-tp-id": "GigabitEthernet3",
                         "pe-bgp-as": 10,
                         "username": "redhat",
                         "password": "redhat",

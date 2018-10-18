@@ -4,5 +4,17 @@ ansible_python_interpreter = python
 [hosts]
 localhost
 
+[ce1]
+192.168.10.5 ansible_user=root ansible_password=redhat
+
+[ce2]
+192.168.20.5 ansible_user=root ansible_password=redhat
+
+[ce:children]
+ce1
+ce2
+
 [hosts:vars]
 netlab_host_provider = baremetal
+
+

@@ -1,0 +1,15 @@
+- name: sleep time
+  pause:
+    seconds: 15
+
+- name: use nmcli to change ifcfg file in CE VMs
+  shell: "ip r del default"
+  when: inventory_hostname in groups['ce']
+
+- name: use nmcli to change ifcfg file in CE1 VM
+  shell: "ip link set enp0s4 up && ip a add 10.10.10.5/24 dev enp0s4 && ip r add default dev enp0s4"
+  when: inventory_hostname in groups['ce1']
+
+- name: use nmcli to change ifcfg file in CE2 VM
+  shell: "ip link set enp0s4 up && ip a add 20.20.20.5/24 dev enp0s4 && ip r add default dev enp0s4"
+  when: inventory_hostname in groups['ce2']

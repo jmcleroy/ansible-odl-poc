@@ -21,10 +21,8 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json"  http://127.0.0.1
                         },
                         "pe-2-ce-tp-id": "GigabitEthernet3",
                         "pe-bgp-as": 10,
-                        "username": "redhat",
-                        "password": "redhat",
-                        "device-type": "cisco",
-                        "pe-mgmt-ip" : "192.168.10.100"
+			"pe-node-id" : "cisco-ios1",
+			"ce-node-id" : "CE-SiteA"
                     }
                 ]
             }
@@ -55,10 +53,8 @@ curl -u admin:admin -X PUT -H "Content-Type: application/json" http://127.0.0.1:
                         },
                         "pe-2-ce-tp-id": "GigabitEthernet3",
                         "pe-bgp-as": 10,
-                        "username": "redhat",
-                        "password": "redhat",
-                        "device-type": "cisco",
-                        "pe-mgmt-ip" : "192.168.20.100"
+			"pe-node-id" : "cisco-ios2",
+			"ce-node-id" : "CE-SiteB"
                     }
                 ]
             }

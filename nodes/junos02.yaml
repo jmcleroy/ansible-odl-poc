@@ -1,31 +1,32 @@
 ---
 ansible_network_os: junos
-enabled: no
+enabled: yes
 
 vm_disk: vqfx10k-re-15.1X53-D60.qcow2
+vm_config: config_junos02.iso
 hostname: junos02
 console_port: 2008
 
 connections:
   - type: udp
-    s_port: 10201
-    d_port: 10101
+    s_port: 20201
+    d_port: 20101
 
   - type: udp
-    s_port: 10202
-    d_port: 10501
+    s_port: 20202
+    d_port: 20501
 
   - type: udp
-    s_port: 10203
-    d_port: 10000
+    s_port: 20203
+    d_port: 20000
 
   - type: udp
-    s_port: 10204
-    d_port: 10000
+    s_port: 20204
+    d_port: 20000
 
   - type: udp
-    s_port: 10205
-    d_port: 10000
+    s_port: 20205
+    d_port: 20000
 
 netlab_mgmt_source_bridge: br2
 mac_address: 52:54:00:bb:bb:02

@@ -43,3 +43,13 @@
       import_role:
         name: netlab
         tasks_from: opendaylight
+
+- name: configure edge routers
+  hosts: edge
+  gather_facts: no
+
+  tasks:
+    - name: configure Edge VMs
+      import_role:
+        name: netlab
+        tasks_from: postdeploy

@@ -14,7 +14,17 @@ localhost
 ce1
 ce2
 
+[edge:children]
+ce1
+ce2
+pe3
+pe4
+
 [hosts:vars]
 netlab_host_provider = baremetal
 
+[pe3]
+192.168.10.150 ansible_user=root ansible_password=Juniper ansible_network_os=junos ansible_ssh_port=22
 
+[pe4]
+192.168.20.150 ansible_user=root ansible_password=Juniper ansible_network_os=junos ansible_ssh_port=22

@@ -1,6 +1,6 @@
 <network>
   <name>default</name>
-  <forward mode='route'> </forward>
+  <forward mode='nat'> </forward>
   <bridge name='br0' stp='on' delay='0'/>
   <ip address='{{ netlab_libvirt_default_dhcp_address }}' netmask='{{ netlab_libvirt_default_dhcp_mask }}'>
     <dhcp>

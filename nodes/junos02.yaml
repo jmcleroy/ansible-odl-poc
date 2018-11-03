@@ -2,7 +2,7 @@
 ansible_network_os: junos
 enabled: yes
 
-vm_disk: vqfx10k-re-15.1X53-D60.qcow2
+vm_disk: media-vsrx-vmdisk-15.1X49-D150.2.qcow2
 vm_config: config_junos02.iso
 hostname: junos02
 console_port: 2008
@@ -13,8 +13,8 @@ connections:
     d_port: 20101
 
   - type: udp
-    s_port: 20202
-    d_port: 20501
+    s_port: 10802
+    d_port: 10304
 
   - type: udp
     s_port: 20203

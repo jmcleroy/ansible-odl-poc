@@ -24,6 +24,7 @@ netlab_packages:
 
 netlab_pip_packages:
   - ansible-runner
+  - ncclient
 
 netlab_virt_base_path: /virt
 netlab_virt_vm_path: "{{ netlab_virt_base_path }}/vm"
@@ -64,6 +65,8 @@ netlab_default_ip_junos02: 192.168.20.150
 netlab_default_ip_centos01: 192.168.10.5
 netlab_default_ip_centos02: 192.168.20.5
 
+netlab_default_ip_centos03: 192.168.10.6
+netlab_default_ip_centos04: 192.168.20.6
 # Set the name of the host provider to use.  Currently, this variable
 # accepts the following values:
 #
@@ -81,5 +84,5 @@ netlab_packet_plan: baremetal_1
 netlab_packet_facility: ewr1
 
 netlab_odl: true
-netlab_odl_path: '/usr/local/bin/'
+netlab_odl_path: '/usr/local/bin'
 netlab_odl_roles: '/usr/share/opendaylight-ansible/project/roles'

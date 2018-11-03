@@ -19,6 +19,9 @@
     - repo: "git@github.com:ansible-odl/cisco_ios"
       dest: "{{ netlab_odl_roles }}/ansible-network.cisco_ios"
       branch: l3vpn
+    - repo: "git@github.com:ansible-odl/juniper_junos"
+      dest: "{{ netlab_odl_roles }}/ansible-network.juniper_junos"
+      branch: l3vpn
     - repo: "git@github.com:ansible-odl/arista_eos"
       dest: "{{ netlab_odl_roles }}/ansible-network.arista_eos"
       branch: devel

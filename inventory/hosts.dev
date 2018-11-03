@@ -10,13 +10,23 @@ localhost
 [ce2]
 192.168.20.5 ansible_user=root ansible_password=redhat
 
+[ce3]
+192.168.10.6 ansible_user=root ansible_password=redhat
+
+[ce4]
+192.168.20.6 ansible_user=root ansible_password=redhat
+
 [ce:children]
 ce1
 ce2
+ce3
+ce4
 
 [edge:children]
 ce1
 ce2
+ce3
+ce4
 pe3
 pe4
 

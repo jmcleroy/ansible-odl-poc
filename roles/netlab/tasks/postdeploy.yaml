@@ -15,10 +15,10 @@
   when: inventory_hostname in groups['ce2']
 
 - name: Configure interface facing the PE router in CE3 VM
-  shell: "ip link set enp0s4 up && ip a add 30.30.30.5/24 dev enp0s4 && ip r add default dev enp0s4"
+  shell: "ip link set enp0s4 up && ip a add 30.30.30.5/24 dev enp0s4 && ip r add default via 30.30.30.30 dev enp0s4"
   when: inventory_hostname in groups['ce3']
 
 - name: Configure interface facing the PE router in CE4 VM
-  shell: "ip link set enp0s4 up && ip a add 40.40.40.5/24 dev enp0s4 && ip r add default dev enp0s4"
+  shell: "ip link set enp0s4 up && ip a add 40.40.40.5/24 dev enp0s4 && ip r add default via 40.40.40.40 dev enp0s4"
   when: inventory_hostname in groups['ce4']
 

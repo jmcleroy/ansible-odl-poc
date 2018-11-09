@@ -1,0 +1,11 @@
+diff --git a/bin/ansible-connection b/bin/ansible-connection
+index ac378a4d87..89f67b74d6 100755
+--- a/bin/ansible-connection
++++ b/bin/ansible-connection
+@@ -107,6 +107,7 @@ class ConnectionProcess(object):
+
+             self.connection._socket_path = self.socket_path
+             self.srv.register(self.connection)
++            setattr(self.connection, 'srv', self.srv)
+             messages.extend(sys.stdout.getvalue().splitlines())
+             messages.append('connection to remote device started successfully')

@@ -34,3 +34,8 @@
   patch:
     src: ../../misc/ansible-runner.patch
     dest: /usr/lib/python2.7/site-packages/ansible_runner/__main__.py
+
+- name: patch ansible-connection
+  patch:
+    src: ../../misc/ansible-connection.patch
+    dest: /usr/bin/ansible-connection
